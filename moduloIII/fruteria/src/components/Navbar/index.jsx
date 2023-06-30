@@ -1,5 +1,6 @@
 import { HStack, Spacer, Link } from "@chakra-ui/react"
 import catLogo from '../../assets/backCat.jpg'
+import { CardWidget } from "../CartWidget"
 
 const Navbar = () => {
  return(
@@ -10,7 +11,7 @@ const Navbar = () => {
         <Link>Historia</Link>
         <Link>Catalogo</Link>
         <Link>Encuentranos</Link>
-     
+     <CardWidget />
         </HStack>
      </HStack>
  )
