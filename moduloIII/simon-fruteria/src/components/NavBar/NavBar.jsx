@@ -13,24 +13,15 @@ const Navbar = () => {
     <nav className="navbar">
       <div className="container">
         <div >
-      <Brand/>
+        <NavLink to="/"><Brand/></NavLink>
         </div>
         <div className="nav-elements">
           <ul>
             <li>
-              <NavLink to="/">Home</NavLink>
+              <NavLink to="/categorias/:idCategory">Categorias</NavLink>
             </li>
             <li>
-              <NavLink to="/blog">Blog</NavLink>
-            </li>
-            <li>
-              <NavLink to="/projects">Projects</NavLink>
-            </li>
-            <li>
-              <NavLink to="/about">About</NavLink>
-            </li>
-            <li>
-              <NavLink to="/contact">Contact</NavLink>
+              <NavLink to="/item/:idProduct">Productos</NavLink>
             </li>
             <CardWidget/>
           </ul>

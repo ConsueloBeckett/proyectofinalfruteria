@@ -1,7 +1,8 @@
-import { ItemCount } from './components/ItemCount/ItemCount';
+import { Route, BrowserRouter, Routes } from 'react-router-dom';
 import Navbar from './components/NavBar/NavBar';
-import { BrowserRouter } from 'react-router-dom';
+import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
 import ItemListContainer from './components/ItemListContainer/ItemListContainer';
+
 
 
 
@@ -11,8 +12,12 @@ function App() {
 
  <BrowserRouter>
    <Navbar/>
- <ItemCount initial={1} stock={10} onAdd={(number) => console.log('Agregaste ' + number + ' productos')}/>
-<ItemListContainer/>
+   <Routes>
+    <Route path="/" element={<ItemListContainer/>}/>
+    <Route path="/category/:categoryid" element={<ItemListContainer/>}/>
+    <Route path="/item/:id" element={<ItemDetailContainer/>}/>
+ 
+</Routes>
 </BrowserRouter>
   );
 }
