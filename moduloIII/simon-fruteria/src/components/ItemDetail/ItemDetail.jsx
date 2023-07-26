@@ -6,9 +6,6 @@ import { useState } from 'react'
 
 const ItemDetail = ({nombre, id, caracteristica, category}) => {
 
-  const [products, setProducts] = useState([])
- 
- 
   return (
     <div>
     <h3>Nombre del producto: 
