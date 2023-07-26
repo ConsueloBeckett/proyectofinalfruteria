@@ -1,14 +1,21 @@
 import React from 'react'
+import ItemCount from '../ItemCount/ItemCount'
+import { useState } from 'react'
 
-const ItemDetail = ({products}) => {
+
+
+const ItemDetail = ({nombre, id, caracteristica, category}) => {
+
+  const [products, setProducts] = useState([])
+ 
+ 
   return (
     <div>
-    <img src={products.image} alt="" width={40} height={40} />
-    <h2>Nombre del producto: 
-    {products.nombre}</h2>
-    <p> Caracteristicas: {products.caracteristica}</p>
-    <p>Categoria: {products.category}</p>
-   
+    <h3>Nombre del producto: 
+    {nombre}</h3>
+    <p> Caracteristicas: {caracteristica}</p>
+    <p>Categoria: {category}</p>
+   <footer><ItemCount initial={1} stock={10} onAdd={(quantity) =>console.log("agregado")}/></footer>
   </div>
   )
 }

@@ -3,9 +3,6 @@ import Navbar from './components/NavBar/NavBar';
 import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
 import ItemListContainer from './components/ItemListContainer/ItemListContainer';
 
-
-
-
 function App() {
   
   return (
@@ -14,9 +11,9 @@ function App() {
    <Navbar/>
    <Routes>
     <Route path="/" element={<ItemListContainer/>}/>
-    <Route path="/category/:categoryid" element={<ItemListContainer/>}/>
-    <Route path="/item/:id" element={<ItemDetailContainer/>}/>
- 
+    <Route path="/category/:categoryId" element={<ItemListContainer/>}/>
+    <Route path="/item/:itemId" element={<ItemDetailContainer/>}/>
+    <Route path="*" element={<h1>NOT FOUND 404</h1>}/>
 </Routes>
 </BrowserRouter>
   );

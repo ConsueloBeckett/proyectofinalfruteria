@@ -5,6 +5,7 @@ const CardWidget = () => {
   return (
     <div>
         <BiCartAlt/>
+        0
     </div>
   )
 }

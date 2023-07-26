@@ -18,10 +18,10 @@ const Navbar = () => {
         <div className="nav-elements">
           <ul>
             <li>
-              <NavLink to="/categorias/:idCategory">Categorias</NavLink>
+              <NavLink to={"/category/fruta"} className={({ isActive }) => isActive ? "active" : "option"}>Frutas</NavLink>
             </li>
             <li>
-              <NavLink to="/item/:idProduct">Productos</NavLink>
+            <NavLink to={"/category/verdura"} className={({ isActive }) => isActive ? "active" : "option"}>Verduras</NavLink>
             </li>
             <CardWidget/>
           </ul>

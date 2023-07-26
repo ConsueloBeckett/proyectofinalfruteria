@@ -91,28 +91,28 @@ const products = [
     }
   ]
 
-  export const AskProducts =() => {
-    return new Promise((res) => {
-        setTimeout(() => {
-            res(products)
-        
-        }, 100)
 
-    })
-
-}
-
-export const getProducts = (id) => {
+export const getProducts = () => {
 return new Promise((res) => {
 setTimeout(() => {
-  const products = products.find(product => product.id === id)
   res(products);
 
-}, 100)
+}, 400)
 
 })
 }
 
+
+export const getProductsById = (productsId) => {
+return new Promise(res => {
+setTimeout(() => {
+  res(products.find(product => product.id === productsId));
+
+  }, 400)
+
+})
+
+}
 
 export const getProductsByCategory = (category) => {
 return new Promise(res => {
@@ -120,7 +120,7 @@ setTimeout(() => {
   const productsByCategory = products.filter(product => product.category === category)
   res(products);
 
-  }, 100)
+  }, 400)
 
 })
 
