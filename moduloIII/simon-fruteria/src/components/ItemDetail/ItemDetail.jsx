@@ -1,13 +1,14 @@
 import React from 'react'
 import ItemCount from '../ItemCount/ItemCount'
-import { useState } from 'react'
 
 
 
-const ItemDetail = ({nombre, id, caracteristica, category}) => {
+
+const ItemDetail = ({nombre, id, caracteristica, category, image}) => {
 
   return (
     <div>
+      <img src={image} alt={nombre} width={40} height={40}></img>
     <h3>Nombre del producto: 
     {nombre}</h3>
     <p> Caracteristicas: {caracteristica}</p>

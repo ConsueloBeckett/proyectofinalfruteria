@@ -1,6 +1,6 @@
 const products = [
     {
-      id: 1,
+      id: "1",
       nombre: "Berenjena",
       precio: 2500,
       cantidad: 10,
@@ -9,7 +9,7 @@ const products = [
       category: "verdura"
     },
     {
-      id: 2,
+      id: "2",
       nombre: "Arandano",
       precio: 5000,
       cantidad: 8,
@@ -18,7 +18,7 @@ const products = [
       category: "fruta"
     },
     {
-      id: 3,
+      id: "3",
       nombre: "Frutilla",
       precio: 3000,
       cantidad: 20,
@@ -27,7 +27,7 @@ const products = [
       category: "fruta"
     },
     {
-      id: 4,
+      id: "4",
       nombre: "Cereza",
       precio: 5000,
       cantidad: 20,
@@ -36,7 +36,7 @@ const products = [
       category: "fruta"
     },
     {
-      id: 5,
+      id: "5",
       nombre: "Durazno",
       precio: 2500,
       cantidad: 15,
@@ -45,7 +45,7 @@ const products = [
       category: "fruta"
     },
     {
-      id: 6,
+      id: "6",
       nombre: "Sandia",
       precio: 3000,
       cantidad: 20,
@@ -54,7 +54,7 @@ const products = [
       category: "fruta"
     },
     {
-      id: 7,
+      id: "7",
       nombre: "Tomate",
       precio: 1500,
       cantidad: 30,
@@ -63,7 +63,7 @@ const products = [
       category: "verdura"
     },
     {
-      id: 8,
+      id: "8",
       nombre: "Mango",
       precio: 3000,
       cantidad: 15,
@@ -72,7 +72,7 @@ const products = [
       category: "fruta"
     },
     {
-      id: 9,
+      id: "9",
       nombre: "Pera",
       precio: 2000,
       cantidad: 25,
@@ -81,7 +81,7 @@ const products = [
       category: "fruta"
     },
     {
-      id: 10,
+      id: "10",
       nombre: "Kiwi",
       precio: 2000,
       cantidad: 12,
@@ -103,11 +103,11 @@ setTimeout(() => {
 }
 
 
-export const getProductsById = (productsId) => {
+export const getProductsById = (itemId) => {
 return new Promise(res => {
 setTimeout(() => {
-  res(products.find(product => product.id === productsId));
-
+  const producto = products.find(prod => prod.id === itemId);
+  res(producto);
   }, 400)
 
 })
@@ -118,7 +118,7 @@ export const getProductsByCategory = (category) => {
 return new Promise(res => {
 setTimeout(() => {
   const productsByCategory = products.filter(product => product.category === category)
-  res(products);
+  res(productsByCategory);
 
   }, 400)
 
