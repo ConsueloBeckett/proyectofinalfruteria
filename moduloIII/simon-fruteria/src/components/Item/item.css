@@ -1,0 +1,45 @@
+/* Style for the container div */
+.itemDiv {
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  /* Style for the image */
+  img {
+    display: block;
+    margin: 0 auto; /* Center the image horizontally */
+  }
+  
+  /* Style for the product name */
+  h3 {
+    font-size: 18px;
+    margin-top: 10px;
+  }
+  
+  /* Style for the price */
+  p:nth-of-type(1) {
+    font-weight: bold;
+    color: #007bff; /* Blue color for the price */
+  }
+  
+  /* Style for the quantity */
+  p:nth-of-type(2) {
+    font-style: italic;
+  }
+  
+  /* Style for the "Detalles" button */
+  button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  /* Remove default link styles and underline from button inside link */
+  Link button {
+    text-decoration: none;
+  }

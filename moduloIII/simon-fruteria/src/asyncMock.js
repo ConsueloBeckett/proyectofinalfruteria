@@ -87,10 +87,16 @@ const products = [
       cantidad: 12,
       image: "https://wprock.fr/ezoimgfmt/assets.wprock.fr/emoji/joypixels/512/1f95d.png?ezimgfmt=rs:140x140/rscb25/ngcb25/notWebP",
       caracteristica: "es una fruta  dulce y jugosa.",
-      category: "fruta"
+      category: "fruta",
+      "nuevas_verduras": [
+        "Tomate",
+        "Zapallo",
+        "Pimiento",
+        "Acelga"]
     }
   ]
 
+ 
 
 export const getProducts = () => {
 return new Promise((res) => {

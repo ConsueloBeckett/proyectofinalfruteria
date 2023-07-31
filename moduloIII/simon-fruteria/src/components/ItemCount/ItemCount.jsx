@@ -1,21 +1,26 @@
 import { useState } from 'react'
 import React from 'react'
 
-const ItemCount = ({stock, initial, onAdd}) => {
+const ItemCount = ({ stock, initial, onAdd }) => {
+  const [number, setNumber] = useState(initial);
 
- const [number, setNumber] = useState(0);
-
-    const handleAdd = () => {
-        setNumber(number+1);
+  const handleAdd = () => {
+    if (number < stock) {
+      setNumber(number + 1);
     }
-    const handleSub = () => {
-        setNumber(number-1);    
-    }
-    const handleReset = () => {
-        setNumber(0);
-    }        
+  };
 
-  return (
+  const handleSub = () => {
+    if (number > 0) {
+      setNumber(number - 1);
+    }
+  };
+
+  const handleReset = () => {
+    setNumber(initial);
+  };
+
+  return (       
     <div><h3>Cantidad: {number}</h3>
         <button onClick={handleAdd}>+</button>
         <button onClick={handleSub}>-</button>

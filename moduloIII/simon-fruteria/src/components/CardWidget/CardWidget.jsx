@@ -4,8 +4,9 @@ import { BiCartAlt } from 'react-icons/bi';
 const CardWidget = () => {
   return (
     <div>
-        <BiCartAlt/>
+        <button><BiCartAlt/>
         0
+        </button>
     </div>
   )
 }
