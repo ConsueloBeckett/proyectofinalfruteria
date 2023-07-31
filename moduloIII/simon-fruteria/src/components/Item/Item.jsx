@@ -9,7 +9,7 @@ const Item = ({products, image, nombre, precio, cantidad, id}) => {
 
   return (
     <div className='itemDiv'>
-    <img src={products.image} alt={nombre} width={40} height={40} />
+    <img src={products.image} alt={nombre} width={60} height={60} />
     <h3>Nombre: {products.nombre}</h3>
     <p>Precio: ${products.precio}</p>
     <p>Cantidad: {products.cantidad}</p>

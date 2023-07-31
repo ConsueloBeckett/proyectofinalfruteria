@@ -90,10 +90,29 @@ const products = [
       category: "fruta",
       "nuevas_verduras": [
         "Tomate",
-        "Zapallo",
         "Pimiento",
         "Acelga"]
+    },
+    {
+      id: "11",
+      nombre: "Lechuga",
+      precio: 2000,
+      cantidad: 25,
+      image: "https://wprock.fr/ezoimgfmt/assets.wprock.fr/emoji/joypixels/512/1f96c.png?ezimgfmt=rs:140x140/rscb25/ngcb25/notWebP",
+      caracteristica: "es una verdura.",
+      category: "verdura"
+    },
+    {
+      id: "12",
+      nombre: "Brocoli",
+      precio: 2000,
+      cantidad: 25,
+      image:"https://wprock.fr/ezoimgfmt/assets.wprock.fr/emoji/joypixels/512/1f966.png?ezimgfmt=rs:140x140/rscb25/ngcb25/notWebP",
+      caracteristica: "es una verdura.",
+      category: "verdura"
     }
+
+
   ]
 
  

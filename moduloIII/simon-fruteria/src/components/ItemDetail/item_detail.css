@@ -22,11 +22,13 @@ body {
     max-width: 100%;
     height: auto;
     border-radius: 5px;
+    background-color: black;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   }
   
   .item-details {
     margin-top: 20px;
+    background-color: bl;
   }
   
   .item-name {
