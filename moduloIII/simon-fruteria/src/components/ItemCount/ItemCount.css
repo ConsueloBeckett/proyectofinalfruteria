@@ -1,0 +1,12 @@
+.item-count{
+display: flex;
+align-items: center;
+gap: 1rem;
+margin-top: 1 rem;
+
+}
+
+.item-count button:hover, .AddCart:hover, .enviar:hover {
+ background-color: white;
+ color: black;
+}

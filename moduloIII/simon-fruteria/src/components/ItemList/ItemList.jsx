@@ -3,8 +3,8 @@ import Item from '../Item/Item'
 
 const ItemList = ({products}) => {
   return (
+    
     <div>
-          <h4>PRODUCTOS</h4>
         { 
         products.length > 0 && 
         products.map((products) => {

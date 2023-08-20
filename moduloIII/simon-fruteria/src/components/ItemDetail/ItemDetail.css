@@ -15,7 +15,8 @@ body {
   }
   
   .item-image {
-    text-align: center;
+    width:100px ;
+    height:100px
   }
   
   .item-image img {

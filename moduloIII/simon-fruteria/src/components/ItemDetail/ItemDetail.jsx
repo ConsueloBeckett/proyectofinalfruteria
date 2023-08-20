@@ -1,25 +1,45 @@
-import React from 'react'
+
+import { CartContext } from '../../context/CartContext'
 import ItemCount from '../ItemCount/ItemCount'
-import './item_detail.css'
+import './ItemDetail.css'
+import {  useState, useContext} from 'react'
 
 
+const ItemDetail = ({nombre, id, caracteristica, category, image, stock, precio}) => {
+  const products = ({nombre, id, caracteristica, category, image, stock, precio})
 
+const {cart, addToCart } = useContext(CartContext);
+console.log(cart)
 
-const ItemDetail = ({nombre, id, caracteristica, category, image}) => {
+const [cantidad, setCantidad] = useState(1);
 
-  return (
+const handleRest = () => {
+  cantidad > 1 && setCantidad(cantidad -1)
+
+}
+
+const handleAdd = () => {
+  cantidad < products.stock && setCantidad(cantidad +1)
+
+}
+
+return (
  
     <div className="container">
       <div className='item-image'>
-      <img src={image} alt={nombre} width={60} height={60}></img></div>
+      <img src={image} alt={nombre} ></img></div>
       <div className='item-details'>
     <h3 className='item-name'>Nombre: 
     {nombre}</h3>
     <h4 className='item-description'> Caracteristicas: {caracteristica}</h4>
     <div  className='item-properties'>
     <p className='property-label'>Categoria: {category}</p>
+    <p className='property-label'>Precio: ${precio}</p>
     </div>
-   <footer><ItemCount initial={1} stock={10} onAdd={(quantity) =>console.log("agregado")}/></footer>
+   <ItemCount cantidad={cantidad} 
+   handleRest={handleRest} 
+   handleAdd={handleAdd} 
+   handleCart={() => {addToCart(products, cantidad)} }/>
    </div>
   </div>
   

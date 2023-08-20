@@ -7,7 +7,6 @@ import CardWidget from '../CardWidget/CardWidget';
 
 
 
-
 const Navbar = () => {
   return (
     <nav className="navbar">
@@ -22,6 +21,9 @@ const Navbar = () => {
             </li>
             <li>
             <NavLink to={"/category/verdura"} className={({ isActive }) => isActive ? "active" : "option"}>Verduras</NavLink>
+            </li>
+            <li>
+            <NavLink to={"/form"} className={({ isActive }) => isActive ? "active" : "option"}>Contáctanos</NavLink>
             </li>
             <CardWidget/>
           </ul>
