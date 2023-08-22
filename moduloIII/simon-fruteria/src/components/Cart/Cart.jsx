@@ -1,13 +1,14 @@
 import React, { useContext } from 'react';
 import './Cart.css';
 import { CartContext } from '../../context/CartContext';
+import { Link } from "react-router-dom";
+
 
 const Cart = () => {
   const { cart, EmptyCart, totalPrice} = useContext(CartContext);
 
   const handleEmpty = () => {
     EmptyCart()
-
   }
 
   return (
@@ -29,12 +30,13 @@ const Cart = () => {
       }
 
       { 
-      cart.lenght > 0 ?
+     
       <>
       <h4>Precio total: ${totalPrice()} </h4>
       <button onClick={handleEmpty}> Empty cart </button>  
-      </>:
-      <h4> the cart is empty</h4>
+      <button> <Link to='/checkout' className='option'>Checkout</Link> </button> 
+     
+      </>
       }
     
     

@@ -14,7 +14,7 @@ const ItemCount = ({cantidad, handleAdd, handleRest, handleCart}) => {
       <p>{cantidad}</p>
       <button onClick={handleRest}>-</button> 
     </div>
-    <button className="AddCart" onClick={handleCart}>Add to cart </button>    
+    <button className="AddCart" onClick={handleCart}>Add </button>    
     </div>
   )
 }

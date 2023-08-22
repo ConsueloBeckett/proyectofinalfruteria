@@ -1,12 +1,55 @@
-.item-count{
-display: flex;
-align-items: center;
-gap: 1rem;
-margin-top: 1 rem;
-
-}
-
-.item-count button:hover, .AddCart:hover, .enviar:hover {
- background-color: white;
- color: black;
-}
+/* Styling for the item count container */
+.item-count {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 10px;
+  }
+  
+ 
+  .item-count div {
+    display: flex;
+    align-items: center;
+  }
+  
+  .item-count button {
+    background-color: #ff6b6b;
+    color: white;
+    border: none;
+    width: 30px;
+    height: 30px;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .item-count button:hover {
+    background-color: #ff8f8f;
+  }
+  
+  .item-count p {
+    font-family: 'Arial', sans-serif;
+    font-size: 18px;
+    color: #333;
+    margin: 0 10px;
+  }
+  
+  
+  .AddCart {
+    background-color: #ff6b6b;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .AddCart:hover {
+    background-color: #ff8f8f;
+  }
+  
